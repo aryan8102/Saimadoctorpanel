@@ -13,13 +13,9 @@ class MedicalRecord extends StatefulWidget {
 }
 
 class _MedicalRecordState extends State<MedicalRecord> {
-
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -48,4 +44,6 @@ class _MedicalRecordState extends State<MedicalRecord> {
     );
   }
 }
+
+
 

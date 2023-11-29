@@ -1,5 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:saimadoctorpanal/Communication/communication.dart';
+import 'package:saimadoctorpanal/Feedback/feedback.dart';
+import 'package:saimadoctorpanal/Payment/payment_page.dart';
+import 'package:saimadoctorpanal/doctor_communication/doctor_communication.dart';
+import 'package:saimadoctorpanal/online_consultation/online_consultation.dart';
+import 'package:saimadoctorpanal/settings/settings.dart';
+
+import '../MedicalRecord/medical_record.dart';
+import '../ReferEarn/refer&earn.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -16,7 +24,8 @@ class CustomDrawer extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage:NetworkImage('https://cdn.pixabay.com/photo/2023/11/18/16/09/pears-8396722_1280.jpg'), // Replace with your image
+                  backgroundImage: NetworkImage(
+                      'https://cdn.pixabay.com/photo/2023/11/18/16/09/pears-8396722_1280.jpg'), // Replace with your image
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -34,7 +43,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Medical Record'),
             onTap: () {
               // Handle item 2 tap
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecord()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecord()));
             },
           ),
           ListTile(
@@ -50,7 +59,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Online Consultation'),
             onTap: () {
               // Handle item 1 tap
-              //Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorOnlineConsultation()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>OnlineConsultation()));
             },
           ),
 
@@ -60,17 +69,10 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               // Handle item 1 tap
 
-              //Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorCommunication()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorCommunication()));
             },
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Refer Patient'),
-            onTap: () {
-              // Handle item 1 tap
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorCommunication()));
-            },
-          ),
+
           ListTile(
             leading: Icon(Icons.calendar_month),
             title: Text('set Date/Time'),
@@ -94,7 +96,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Payment'),
             onTap: () {
               // Handle item 1 tap
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorPayment()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Payment()));
             },
           ),
           ListTile(
@@ -103,7 +105,7 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               // Handle item 1 tap
 
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>ReferEarn()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>ReferEarn()));
             },
           ),
           ListTile(
@@ -111,7 +113,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Settings'),
             onTap: () {
               // Handle item 1 tap
-              //Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorSettings()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>Settings()));
             },
           ),
           ListTile(
@@ -119,6 +121,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Feedback'),
             onTap: () {
               // Handle item 1 tap
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Feedbak()));
             },
           ),
         ],

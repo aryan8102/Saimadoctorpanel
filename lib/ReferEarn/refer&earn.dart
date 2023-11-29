@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import '../appbar/appbar.dart';
 import '../custom/custom.dart';
 
-class Payment extends StatefulWidget {
-  const Payment({super.key});
+class ReferEarn extends StatefulWidget {
+  const ReferEarn({super.key});
 
   @override
-  State<Payment> createState() => _PaymentState();
+  State<ReferEarn> createState() => _ReferEarnState();
 }
 
-class _PaymentState extends State<Payment> {
+class _ReferEarnState extends State<ReferEarn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _PaymentState extends State<Payment> {
               width: 300,
               height: 400,
               child: CachedNetworkImage(
-                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/payment%2Fimage%2013.png?alt=media&token=ca6f6d9a-d855-4b6a-9c5b-fe6e78f2ab1a',
+                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/ReferandEarn%2FGroup%202623%20(1).png?alt=media&token=1a10fd52-81e8-4a98-9817-19b878117856',
                 placeholder: (context, url) =>
                     CircularProgressIndicator(
                       strokeWidth: 1.0,
@@ -30,7 +30,6 @@ class _PaymentState extends State<Payment> {
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
-            Text('No Payment Yet!',style: TextStyle(color: Colors.blue,fontSize: 25),),
           ],
         ),
         drawerEdgeDragWidth: 0,
@@ -38,4 +37,3 @@ class _PaymentState extends State<Payment> {
     );
   }
 }
-

@@ -15,6 +15,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
         body: Column(
           children: [
             appbar(),
@@ -22,9 +23,83 @@ class _SettingsState extends State<Settings> {
               children: [
                 Text('Update Password',style: TextStyle(fontSize: 25,color: Colors.blue),),
                 SizedBox(
-                  height: 20,
+                  height: 80,
+                ),
+               Text('Old Password',style: TextStyle(fontSize: 25,color: Colors.blue),),
+                SizedBox(
+                  height: 10,
                 ),
 
+                Container(
+                  width: 300,
+                  height: 35,
+                  child: TextFormField(
+                    maxLines: 1,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
+                    )
+                  ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('New Password',style: TextStyle(fontSize: 25,color: Colors.blue),),
+                SizedBox(
+                  height: 10,
+                ),
+
+                Container(
+                  width: 300,
+                  height: 35,
+                  child: TextFormField(
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock), // Prefix icon
+                        suffixIcon: Icon(Icons.remove_red_eye),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black, width: 2.0),
+                        )
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text('Confirm Password',style: TextStyle(fontSize: 25,color: Colors.blue),),
+                SizedBox(
+                  height: 10,
+                ),
+
+                Container(
+                  width: 300,
+                  height: 35,
+                  child: TextFormField(
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock), // Prefix icon
+                        suffixIcon: Icon(Icons.remove_red_eye),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black, width: 2.0),
+                        )
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: 100,
+                    height: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                     image: DecorationImage(image: CachedNetworkImageProvider(
+                         'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/doctor_dashboard%2Fbackgroundcolour.png?alt=media&token=c56903ec-1e56-4928-8a66-343bf3ab538a'),
+                         fit: BoxFit.cover
+                     )
+                    ),
+                    child: Center(child: Text('Summit',style: TextStyle(fontSize: 12,color: Colors.white),)))
               ],
             )
           ],

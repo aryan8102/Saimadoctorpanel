@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../Feedback/feedback.dart';
+
 import '../custom/custom.dart';
 
 class DoctorDashbord extends StatefulWidget {
@@ -11,12 +13,10 @@ class DoctorDashbord extends StatefulWidget {
 }
 
 class _DoctorDashbordState extends State<DoctorDashbord> {
-
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
+
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -44,8 +44,7 @@ class _DoctorDashbordState extends State<DoctorDashbord> {
                           Spacer(),
                           GestureDetector(
                               onTap: (){
-                                // Scaffold.of(context).openDrawer();
-                                _scaffoldKey.currentState?.openEndDrawer();
+                                Scaffold.of(context).openEndDrawer();
                               },
                               child:Padding(
                                 padding: EdgeInsets.only(right: 5),
@@ -81,4 +80,3 @@ class _DoctorDashbordState extends State<DoctorDashbord> {
     );
   }
 }
-
