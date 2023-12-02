@@ -31,6 +31,12 @@ class _PaymentState extends State<Payment> {
               ),
             ),
             Text('No Payment Yet!',style: TextStyle(color: Colors.blue,fontSize: 25),),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: (){},
+                child: Text('Payment Details'))
           ],
         ),
         drawerEdgeDragWidth: 0,

@@ -7,6 +7,8 @@ import 'Doctor/doctor_dashbord.dart';
 import 'Feedback/feedback.dart';
 import 'LabTest/lab_test.dart';
 import 'MedicalRecord/medical_record.dart';
+import 'Payment/payment_page.dart';
+import 'Payment/payment_page_two.dart';
 import 'doctor_communication/doctor_communication.dart';
 import 'doctor_communication/doctor_communication_two.dart';
 import 'firebase_options.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home:Settings(),
-      home:Feedbak(),
+      home:PaymentPage(),
     );
   }
 }
